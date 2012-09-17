@@ -18,7 +18,7 @@ tar xzf $TAR -C $TMP_DIR
 DIR=$(tar tvzf $TAR |head -n1|awk '{print $NF}')
 
 for file in `ls -a $TMP_DIR/$DIR`; do
-    [ "$file" = "." -o "$file" = ".." ] && continue
+    [ "$file" = "." -o "$file" = ".." -o "install.sh" ] && continue
     [ -e "$file" ] && bk_file "$file"
 
     echo "* Copying: $file"
