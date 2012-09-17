@@ -21,7 +21,7 @@ for file in `ls -a $TMP_DIR/$DIR`; do
     [ -e "$file" ] && bk_file "$file"
 
     echo "* Copying: $file"
-    cp -r "$file" .
+    cp -r "$TMP_DIR/$DIR$file" .
 done
 
 exit 0
