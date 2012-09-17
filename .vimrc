@@ -7,11 +7,8 @@ set ai
 set hlsearch
 set bg=dark
 "set ic
-set foldlevelstart=99
 set hidden
-"set colorcolumn=80
 
-hi ColorColumn ctermbg=3 guibg=#888
 
 " Press F4 to toggle highlighting on/off, and show current value.
 noremap <F4> :set hlsearch! hlsearch?<CR>
