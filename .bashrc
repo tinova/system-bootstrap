@@ -38,7 +38,7 @@ safe_load ~/.bash_colors
 function get_exit_status {
     status=`echo $?`
     if [ `echo $status` != "0" ]; then
-        exit_status="($status)"
+        exit_status="($status) "
     else
         exit_status=""
     fi
@@ -49,9 +49,9 @@ PROMPT_COMMAND='get_exit_status'
 GIT_PS1_SHOWDIRTYSTATE=1
 
 if type __git_ps1 &> /dev/null; then
-    PS1="${HOST_PROMPT}${bldred}>\${exit_status}${txtrst} ${bldcyn}\W${txtrst} ${bldpur}\$(__git_ps1 '(%s)')${txtrst} $ "
+    PS1="${HOST_PROMPT}${bldred}\${exit_status}${txtrst}${bldcyn}\W${txtrst} ${bldpur}\$(__git_ps1 '(%s)')${txtrst} $ "
 else
-    PS1="${HOST_PROMPT}${bldred}>\${exit_status}${txtrst} ${bldcyn}\W${txtrst} $ "
+    PS1="${HOST_PROMPT}${bldred}\${exit_status}${txtrst}${bldcyn}\W${txtrst} $ "
 fi
 
 #env variables
