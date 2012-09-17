@@ -20,6 +20,7 @@ alias gslhead='gsl|head'
 alias gr='gitroot'
 
 #opennebula
+mkdir -p $HOME/.one
 export ONE_AUTH=$HOME/.one/auth
 echo 'oneadmin:-' > $ONE_AUTH
 
