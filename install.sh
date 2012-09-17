@@ -6,13 +6,14 @@ TAR=$TMP_DIR/system-bootstrap.tar.gz
 TIMESTAMP=$(date '+%Y%m%d%H%M')
 
 function bk_file {
+    echo "* Backing up: $1 => $1.$TIMESTAMP"
     mv "$1" "$1.$TIMESTAMP"
 }
 
 cd $HOME
 
 curl -sL $URL > $TAR
-tar xvzf $TAR -C $TMP_DIR
+tar xzf $TAR -C $TMP_DIR
 
 DIR=$(tar tvzf $TAR |head -n1|awk '{print $NF}')
 
