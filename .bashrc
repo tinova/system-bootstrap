@@ -61,3 +61,4 @@ export BROWSER=chromium
 
 # bash_aliases
 safe_load ~/.bash_aliases
+alias gsl='git log --oneline --decorate --color'

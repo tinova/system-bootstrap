@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-URL=https://github.com/jmelis/system-bootstrap/tarball/master
+URL=https://github.com/tinova/system-bootstrap/tarball/master
 TMP_DIR=/tmp
 TAR=$TMP_DIR/system-bootstrap.tar.gz
 TIMESTAMP=$(date '+%Y%m%d%H%M')
